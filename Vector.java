@@ -2,7 +2,7 @@
 Une classe utilitaire pour gérer les opérations entre les vecteurs
 Les vecteurs sont considérées comme des tableaux de doubles
 */
-import Math;
+import java.lang.Math;
 public final class Vector{
 
 	//la constructeur
@@ -61,7 +61,7 @@ public final class Vector{
 		}
 		return produit_sum;		
 	}
-	//retournr le double d'un vecteur
+	//retourne le double d'un vecteur
 	public static double carre(double[] v){
 		double v_carre=0.0;
 		for(int i=0; v.length;i++){
