@@ -1,3 +1,9 @@
+
+/**
+Cette classe crée un joueur avec un nom et les informations de position.
+La position standarde de debut est la case 0.
+Cette classe contient une methode move qui permet au joueur d'avancer
+**/
 public class Player{
 	public static final int nbr_Essaie=3;
 	private String nom;
@@ -29,8 +35,11 @@ public class Player{
 	}
 
 	//la méthode pour bouger le player sur le plateau
-	public void move(){
-		current_pos++;
+	public void moveForward(int i){
+		current_pos+=i;
+	}
+	public void moveBackward(int i){
+		current_pos-=i;
 	}
 	//toString Method
 	public void printPlayerDetails(){
