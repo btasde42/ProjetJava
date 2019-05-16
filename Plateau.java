@@ -1,5 +1,3 @@
-
-import java.util.*;
 //c'est un plateau de ce jeu, on le voit comme un tableau de Cases
 public class Plateau {
 	//variables
