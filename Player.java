@@ -34,7 +34,7 @@ public class Player{
 		current_pos=newposition;
 	}
 
-	//la méthode pour bouger le player sur le plateau
+	//les méthodes pour bouger les players sur le plateau
 	public void moveForward(int i){
 		current_pos+=i;
 	}
