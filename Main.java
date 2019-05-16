@@ -1,18 +1,37 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
-
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main{
 	public static void main(String[] args){
 		try{
 			EspaceVectorielle v1=new EspaceVectorielle("w2v_final3.csv");
-			List<Double> vec1=v1.getVector("mère");
-			List<Double> vec2=v1.getVector("chaise");
-			System.out.println(VectorProjet.cosinus(vec1,vec2));
 
 		}catch(IOException e){
 			System.out.println(e);
 		}
+
+		System.out.println("Combien de joueur vous voulez ajouter?");
+		Scanner in=new Scanner(System.in);
+		int a=in.nextInt();
+		//on crée une array liste pour pouvoir enregistrer les players informations.
+		List<Player> players=new ArrayList<Player>();
+		Scanner noms=new Scanner(System.in);
+		String name;
+		for(int i=0;i<a;i++){
+			//on crée une boucle pour récuperer les noms des players sur le co,sole
+			System.out.println("Donnez un nom à Player" + i);
+			name=noms.nextLine();
+			players.add(new Player(name));
+		}
+		for(int i=0;i<players.size();i++){
+			players.get(i).printPlayerDetails();
+		}
+		players.get(0).move();
+		players.get(0).printPlayerDetails();
+
+
 	}
 }
