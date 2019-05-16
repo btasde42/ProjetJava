@@ -29,9 +29,11 @@ public class Main{
 		for(int i=0;i<players.size();i++){
 			players.get(i).printPlayerDetails();
 		}
-		players.get(0).move();
-		players.get(0).printPlayerDetails();
+
+		//players.get(0).moveForward(7);
+		//players.get(0).printPlayerDetails();
 
 
+	
 	}
 }
