@@ -14,9 +14,9 @@ public class Plateau {
 		c3=new Case("Reculez 3 cases",3); 
 		p=new Case[n]; 
 		for(int i=0;i<n;i++){
-			if (i%2==0){
+			if (i%6==0){
 				p[i]=c2;
-			}else if (i%3==0){
+			}else if (i%5==0){
 				p[i]=c3;
 			}else{
 				p[i]=c1;
@@ -28,12 +28,11 @@ public class Plateau {
 	public int size(){
 		return n;
 	}
-
 	
 
 	public void affiche(){
 		for (int i=0;i<this.n;i++){
-			System.out.print(p[i]);
+			System.out.print(p[i].getType());
 		}
 		System.out.println();
 	}

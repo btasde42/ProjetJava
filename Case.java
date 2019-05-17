@@ -17,7 +17,7 @@ public class Case{
 	}
 
 	public String getSignal(){
-		return siganel;
+		return signal;
 	}
 	
 	//methode, pour afficher la phrase

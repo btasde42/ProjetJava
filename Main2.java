@@ -7,11 +7,11 @@ public class Main2 {
 		System.out.println(p.size());//affiche la taille de ce plateau
 		
 		//preciser les 3 differents types de cases, et ses phrases
-		Case c1=new Case("");
+		Case c1=new Case("",1);
 		System.out.println(c1.afficheSignal());
-		Case c2=new Case("relancer le de!");
+		Case c2=new Case("relancer le de!",2);
 		System.out.println(c2.afficheSignal());
-		Case c3=new Case("reculer 3 cases");
+		Case c3=new Case("reculer 3 cases",3);
 		System.out.println(c3.afficheSignal());
 
 	}
