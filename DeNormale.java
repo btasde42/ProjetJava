@@ -4,15 +4,14 @@ les setters.
 **/
 import java.util.Random;
 
-public class DeNormale implements Des{
+public class DeNormale extends Des implements De{
 
 	//le premier et le dernier face des dés.
 	private int first_face;
 	private int last_face;
 
 	public DeNormale(){
-		first_face=1;
-		last_face=6;
+		super(1,6);
 	}
 
 	//accesseurs

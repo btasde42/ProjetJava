@@ -4,15 +4,14 @@ les setters.
 **/
 import java.util.Random;
 
-public class DePiege implements Des{
+public class DePiege extends Des implements De{
 
 	//le premier et le dernier face des dés.
 	private int first_face;
 	private int last_face;
 
 	public DePiege(){
-		first_face=0;
-		last_face=6;
+		super(0,6);
 	}
 
 	//accesseurs
@@ -38,10 +37,6 @@ public class DePiege implements Des{
 	public int jetteDes(){
 		Random des=new Random();
 		int valeur=des.nextInt((last_face-first_face)+1)+first_face;
-
-		if(valeur==0){
-			System.out.println("Restez où vous etes!");
-		}
 		return valeur;
 	}
 }

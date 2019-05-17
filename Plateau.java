@@ -29,6 +29,9 @@ public class Plateau {
 		return n;
 	}
 	
+	public Case get_Case(int i){
+		return p[i];
+	}
 
 	public void affiche(){
 		for (int i=0;i<this.n;i++){

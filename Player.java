@@ -22,7 +22,7 @@ public class Player{
 	}
 
 	//les getters
-	public int getCurrentPosition(){
+	public int getPos(){
 		return current_pos;
 	}
 	public String getName(){
@@ -30,17 +30,10 @@ public class Player{
 	}
 
 	//les setters
-	public void setCurrentPosition(int newposition){
+	public void setPos(int newposition){
 		current_pos=newposition;
 	}
 
-	//les méthodes pour bouger les players sur le plateau
-	public void moveForward(int i){
-		current_pos+=i;
-	}
-	public void moveBackward(int i){
-		current_pos-=i;
-	}
 	//toString Method
 	public void printPlayerDetails(){
 		System.out.println(nom+" est dans la position " + current_pos);

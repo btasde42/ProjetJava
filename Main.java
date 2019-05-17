@@ -26,12 +26,9 @@ public class Main{
 			name=noms.nextLine();
 			players.add(new Player(name));
 		}
-		for(int i=0;i<players.size();i++){
-			players.get(i).printPlayerDetails();
-		}
+		Des d1=new DePiege();
+		GamePlay g1=new GamePlay(players,3,d1);
 
-		//players.get(0).moveForward(7);
-		//players.get(0).printPlayerDetails();
 
 
 	
