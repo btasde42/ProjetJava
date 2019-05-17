@@ -9,6 +9,8 @@ import java.util.regex.*;
 import java.io.*;
 import java.util.Iterator;
 
+
+
 public class EspaceVectorielle{
 	
 	private Map<String, List<Double>> vec_dict;

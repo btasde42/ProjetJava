@@ -66,4 +66,38 @@ public class GamePlay{
 
 	}
 
+	//cette methode extrait à chaque tour un mot random à deviner
+	public static String get_random_word(EspaceVectorielle v){
+		Map<String, List<Double>> map_word=v.getDict();
+		Random r=new Random();
+		List<String> keys=new ArrayList<String>(map_word.keySet());
+		return keys.get(r.nextInt(keys.size()));
+
+	}
+
+	//Cette méthode prend trois mots proposées par l'utilisateur et retourne une dictionnaire
+	//où il y a les mots et leurs valurs de similarité
+	//i est le nombre des mots retournés en resultat; choisit par l'utilisateur
+	public Map<Double,String> calcule_similaire(EspaceVectorielle v, int k, String a, String b, String c){
+		//on obtient les vecteurs de ces trois mots et on calcule leur vecteur totale
+		Map<Double,String> resultats=new Hashmap<>();
+		Double vec_indices=addition(soustraction(getVector(a),getVector(b)),getVector(c));
+		//iteration sur l'espace vectorielle
+		Iterator<Map.Entry<String,List<Double>>> iter =v.entrySet().iterator();
+		while(iter.hasNext()){
+			Map.Entry<String,List<Double>> entry = iter.next();
+			resultats.put(cosinus(vec_indices,entry.getValue()),entry.getKey());
+			
+		}
+		//pour enumerer le map qu'on a crée
+		Map<Double, String> sorted_by_key = new TreeMap<>(resultats);
+		Set set = sorted_by_key.entrySet();
+		Iterator i = set.iterator();
+		while(i.hasNext()&&i<k){
+			Map.Entry k_results=(Map.Entry) i.next();
+		}
+		return k_results;	
+	}
+
+
 }

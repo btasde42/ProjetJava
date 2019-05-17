@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public class Main{
 	public static void main(String[] args){
 		try{
-			EspaceVectorielle v1=new EspaceVectorielle("w2v_final3.csv");
+			EspaceVectorielle v2=new EspaceVectorielle("w2v_final3.csv");
+			v2.getDict();
 
 		}catch(IOException e){
 			System.out.println(e);
@@ -29,10 +30,11 @@ public class Main{
 		Des d1=new DePiege();
 
 		GamePlay g2=new GamePlay(players,3,d1);
-		g2.affiche_positions();
-		g2.change_Position(players.get(1));
-		g2.affiche_positions();
-
+		//g2.affiche_positions();
+		//g2.change_Position(players.get(1));
+		//g2.affiche_positions();
+		//String mot=g2.get_random_word(v2);
+		//System.out.println(mot);
 
 
 	
