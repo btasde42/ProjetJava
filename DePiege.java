@@ -7,8 +7,6 @@ import java.util.Random;
 public class DePiege extends Des implements De{
 
 	//le premier et le dernier face des dés.
-	private int first_face;
-	private int last_face;
 
 	public DePiege(){
 		super(0,6);

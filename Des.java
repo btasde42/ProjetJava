@@ -5,8 +5,8 @@ Une interface pour implementer roll method aux dés
 import java.util.Random;
 public class Des{
 
-	private int first_face;
-	private int last_face;
+	protected int first_face;
+	protected int last_face;
 
 	public Des(int first,int last){
 		this.first_face=first;

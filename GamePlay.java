@@ -44,15 +44,17 @@ public class GamePlay{
 	}
 
 	//cette fonction change la position de joueur avec le jette de dès.
-	public void	Change_Position(Player p){
-		if(!(is_ended())){
-			int nouvelle_pos=this.de.jetteDes();
+	public void	change_Position(Player p){
+		while(!(is_ended())){
+			int nouvelle_pos=de.jetteDes();
+			System.out.println(nouvelle_pos);
 			if(nouvelle_pos==0){
 				System.out.println("Restez où vous etes!");
 				return;
-			}if(pl.get_Case(p.getPos()+nouvelle_pos).getType()==2){
+			}
+			if(pl.get_Case(p.getPos()+nouvelle_pos).getType()==2){
 				pl.get_Case(p.getPos()+nouvelle_pos).afficheSignale();
-				return Change_Position(p); //recursion pour rejetter les des si le nouvel case est de type 2
+				change_Position(p); //recursion pour rejetter les des si le nouvel case est de type 2
 			}
 			p.setPos(p.getPos()+nouvelle_pos);
 			if(pl.get_Case(p.getPos()).getType()==3){ //reculer 3 cases si 

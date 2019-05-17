@@ -27,7 +27,11 @@ public class Main{
 			players.add(new Player(name));
 		}
 		Des d1=new DePiege();
-		GamePlay g1=new GamePlay(players,3,d1);
+
+		GamePlay g2=new GamePlay(players,3,d1);
+		g2.affiche_positions();
+		g2.change_Position(players.get(1));
+		g2.affiche_positions();
 
 
 

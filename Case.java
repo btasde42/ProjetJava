@@ -21,7 +21,7 @@ public class Case{
 	}
 	
 	//methode, pour afficher la phrase
-	public void afficheSignal(){
+	public void afficheSignale(){
 		System.out.println(signal);
 	}
 
