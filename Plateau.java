@@ -9,9 +9,9 @@ public class Plateau {
 
 	//constucteur, on initialise tous
 	public Plateau() {
-		c1=new Case();
-		c2=new Case();
-		c3=new Case(); 
+		c1=new Case("",1);
+		c2=new Case("Relancez les dès",2);
+		c3=new Case("Reculez 3 cases",3); 
 		p=new Case[n]; 
 		for(int i=0;i<n;i++){
 			if (i%2==0){
@@ -28,6 +28,8 @@ public class Plateau {
 	public int size(){
 		return n;
 	}
+
+	
 
 	public void affiche(){
 		for (int i=0;i<this.n;i++){

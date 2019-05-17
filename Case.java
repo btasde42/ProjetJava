@@ -3,17 +3,23 @@ public class Case{
 
 	//variables
 	private String signal;
+	private int type; //le type de case définit par int: normale 1, relancer 2, reculer 3
 
 	//constucteur
-	public Case(String signal){
+	public Case(String signal, int type){
 		this.signal=signal;
+		this.type=type;
+	}
+
+	//les getters
+	public int getType(){
+		return type;
+	}
+
+	public String getSignal(){
+		return siganel;
 	}
 	
-	//ici, on utilise le surcharger, comme ca, on peut chnager la phrase de case dasn le main, 
-	//sans recreer une nouvelle classe
-	public Case(){
-
-	}
 	//methode, pour afficher la phrase
 	public String afficheSignal(){
 		return signal;
