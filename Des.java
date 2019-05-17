@@ -25,7 +25,7 @@ public class Des{
 	}
 
 	//setters
-	public void set_firs_face(int i){
+	public void set_first_face(int i){
 		first_face=i;
 	}
 
